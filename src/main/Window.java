@@ -18,7 +18,7 @@ import states.State;
 
 public class Window implements Runnable{
 	public static final int WIDTH = 1000, HEIGHT = 700;
-	private final String title = "Top Down Zombie Shooter by Joshua Hernandez";
+	private final String title = "JOGOS DIGITAIS";
 	private JFrame window;
 	private Canvas canvas;
 	private Thread thread;
