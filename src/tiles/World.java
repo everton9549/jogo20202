@@ -26,23 +26,32 @@ public class World {
 	
 	
 	private int[][] tiles = new int[][]{
-		{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-		{0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0},
-		{0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0},
-		{0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0},
-		{0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0},
-		{1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1},
-		{1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-		{0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-		{0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-		{0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1},
-		{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0},
-		{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0},
-		{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0},
-		{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0},
-		{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-		{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-		{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+		{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+		{0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0},
+		{0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0},
+		{0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0},
+		{0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0},
+		{1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0},
+		{1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+		{0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+		{0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+		{0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0},
+		{0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0},
+		{0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0},
+		{0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0},
+		{0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0},
+		{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0},
+		{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0},
+		{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0},
+		{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
+		{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
+		{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
+		{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
+		{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
+		{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
+		{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
+		{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+		
 	};
 	
 	private Handler handler;
@@ -81,126 +90,425 @@ public class World {
 		
 		// trees
 		
-		obstacles.add(new Tree(handler, new Vector2D(260, 500), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(130, 500), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(0, 500), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(260, 370), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(0, 630), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(0, 760), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(260, 240), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(260, 110), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(260, 0), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(390, 0), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(520, 0), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(650, 0), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(780, 0), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(910, 0), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(1040, 0), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(1170, 0), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(1170, 130), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(0, 890), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(130, 890), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(260, 890), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(260, 1020), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(260, 1150), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(260, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(390, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(520, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(650, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(780, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(910, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(1040, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(1170, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(1170, 1150), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(1170, 1020), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(1170, 890), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(1170, 760), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(1170, 630), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(1170, 500), Assets.tree));
+		//around
+		obstacles.add(new Tree(handler, new Vector2D(0, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(0, 128), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(0, 256), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(0, 384), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(0, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(0, 640), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(0, 768), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(0, 896), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(0, 1024), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(0, 1152), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(0, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(0, 1408), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(0, 1536), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(0, 1664), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(0, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(128, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(256, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(384, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(512, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(640, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(768, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(896, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1024, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1152, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1280, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1408, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1536, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1664, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1792, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1920, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2048, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2176, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2304, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2432, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2560, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2688, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2816, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2944, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3072, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3200, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3328, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3456, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3584, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3712, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3840, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3968, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4096, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4224, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4352, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4480, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4608, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4736, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4864, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4992, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5120, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5248, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5376, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5504, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5632, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5760, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5888, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(6016, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(6144, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(6272, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(6400, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(6528, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(6656, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(6784, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(6912, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7040, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7168, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7296, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7424, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7552, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7680, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7808, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7936, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8064, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8192, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8320, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8448, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8576, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8704, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8832, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8960, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9088, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(128, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(256, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(384, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(512, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(640, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(768, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(896, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1024, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1152, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1280, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1408, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1536, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1664, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1792, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1920, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2048, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2176, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2304, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2432, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2560, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2688, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2816, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2944, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3072, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3200, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3328, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3456, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3584, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3712, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3840, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3968, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4096, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4224, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4352, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4480, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4608, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4736, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4864, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4992, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5120, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5248, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5376, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5504, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5632, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5760, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5888, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(6016, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(6144, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(6272, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(6400, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(6528, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(6656, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(6784, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(6912, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7040, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7168, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7296, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7424, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7552, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7680, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7808, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7936, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8064, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8192, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8320, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8448, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8576, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8704, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8832, 1792), Assets.tree));
+
+
+		
+		//rall de entrada
+		obstacles.add(new Tree(handler, new Vector2D(256, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(128, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(0, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(256, 384), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(0, 640), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(0, 768), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(256, 256), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(256, 128), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(256, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(384, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(512, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(640, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(768, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(896, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1024, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1152, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1152, 128), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(0, 896), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(128, 896), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(256, 896), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(256, 1024), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(256, 1152), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(256, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(384, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(512, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(640, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(768, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(896, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1024, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1152, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1152, 1152), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1152, 1024), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1152, 896), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1152, 768), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1152, 640), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1152, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1152, 1664), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1152, 1536), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(1152, 1408), Assets.tree));
 		
 		//bloco 1 etec
-		obstacles.add(new Tree(handler, new Vector2D(2560, 630), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(2560, 500), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(2690, 500), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(2820, 500), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(2950, 500), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(2950, 370), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(2950, 240), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(2950, 110), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(2950, 0), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3080, 0), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3210, 0), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3340, 0), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3340, 110), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3340, 240), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3340, 370), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3340, 500), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3470, 500), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3600, 500), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3730, 500), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3730, 630), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(2560, 1150), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2560, 640), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2560, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2560, 384), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2560, 256), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2560, 128), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2688, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2816, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2944, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2944, 384), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2944, 256), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2944, 128), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2944, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3072, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3200, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3328, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3328, 128), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3328, 256), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3328, 384), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3328, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3456, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3584, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3712, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3712, 640), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3712, 384), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3712, 256), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3712, 128), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2560, 1152), Assets.tree));
 		obstacles.add(new Tree(handler, new Vector2D(2560, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(2690, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(2820, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(2950, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(2950, 1410), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(2950, 1540), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(2950, 1670), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(2950, 1800), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3080, 1800), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3210, 1800), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3340, 1800), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3340, 1670), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3340, 1540), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3340, 1410), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3340, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3470, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3600, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3730, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(3730, 1150), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2560, 1408), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2560, 1536), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2560, 1664), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2688, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2816, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2944, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2944, 1408), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2944, 1536), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2944, 1664), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(2944, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3072, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3200, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3328, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3328, 1664), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3328, 1536), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3328, 1408), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3328, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3456, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3584, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3712, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3712, 1152), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3712, 1408), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3712, 1536), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(3712, 1664), Assets.tree));
 		
 		//bloco 2 etec
-		obstacles.add(new Tree(handler, new Vector2D(4740, 630), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(4740, 500), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(4870, 500), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5000, 500), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5130, 500), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5130, 370), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5130, 240), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5130, 110), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5130, 0), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5260, 0), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5390, 0), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5520, 0), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5520, 110), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5520, 240), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5520, 370), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5520, 500), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5650, 500), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5780, 500), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5910, 500), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5910, 630), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(4740, 1150), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(4740, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(4870, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5000, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5130, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5130, 1410), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5130, 1540), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5130, 1670), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5130, 1800), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5260, 1800), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5390, 1800), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5520, 1800), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5520, 1670), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5520, 1540), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5520, 1410), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5520, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5650, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5780, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5910, 1280), Assets.tree));
-		obstacles.add(new Tree(handler, new Vector2D(5910, 1150), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4736, 640), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4736, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4864, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4992, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5120, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5120, 384), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5120, 256), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5120, 128), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5120, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5248, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5376, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5504, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5504, 128), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5504, 256), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5504, 384), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5504, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5632, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5760, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5888, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5888, 640), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4736, 1152), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4736, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4864, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(4992, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5120, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5120, 1408), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5120, 1536), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5120, 1664), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5120, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5248, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5376, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5504, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5504, 1664), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5504, 1536), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5504, 1408), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5504, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5632, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5760, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5888, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(5888, 1152), Assets.tree));
+		
+		
+		//bloco 1 fatec
+		obstacles.add(new Tree(handler, new Vector2D(6912, 640), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(6912, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7040, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7168, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7296, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7296, 384), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7296, 256), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7296, 128), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7296, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7424, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7552, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7680, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7680, 128), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7680, 256), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7680, 384), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7680, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7808, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7936, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8064, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8064, 640), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(6912, 1152), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(6912, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7040, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7168, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7296, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7296, 1408), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7296, 1536), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7296, 1664), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7296, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7424, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7552, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7680, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7680, 1664), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7680, 1536), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7680, 1408), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7680, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7808, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(7936, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8064, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8064, 1152), Assets.tree));
+		
+		
+		//bloco 2 fatec
+		obstacles.add(new Tree(handler, new Vector2D(9088, 640), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9088, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9216, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9344, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9472, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9472, 384), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9472, 256), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9472, 128), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9472, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9600, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9728, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 0), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 128), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 256), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 384), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 512), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 640), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 768), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 896), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 1024), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 1152), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 1408), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 1536), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 1664), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 1920), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 2048), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9728, 2048), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9600, 2048), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9728, 2176), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9728, 2304), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9728, 2432), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9728, 2560), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9728, 2688), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9728, 2816), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9728, 2944), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9728, 3072), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 2176), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 2304), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 2432), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 2560), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 2688), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 2816), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 2944), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9856, 3072), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9600, 3072), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9472, 3072), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9344, 3072), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9216, 3072), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9088, 3072), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8960, 3072), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8832, 3072), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8704, 3072), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8704, 2944), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8704, 2816), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8704, 2688), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8704, 2560), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8704, 2432), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8704, 2304), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8704, 2176), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8704, 2048), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8832, 2048), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(8960, 2048), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9088, 2048), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9216, 2048), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9344, 2048), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9344, 1920), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9344, 1792), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9344, 1664), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9472, 1664), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9472, 1536), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9472, 1408), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9472, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9344, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9216, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9088, 1280), Assets.tree));
+		obstacles.add(new Tree(handler, new Vector2D(9088, 1152), Assets.tree));
 	}
 	
 	
@@ -251,6 +559,8 @@ public class World {
 		player.getCurrentGun().render(g);
 		
 	}
+	
+	
 	public Tile getTile(int x, int y){
 		Tile tile = Tile.tiles[tiles[x][y]];
 		return tile;
@@ -271,5 +581,9 @@ public class World {
 	public ArrayList<Blood> getBloodSplats(){
 		return bloodSplats;
 	}
+
+
+
+	
 }
 	

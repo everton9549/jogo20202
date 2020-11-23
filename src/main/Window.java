@@ -3,12 +3,15 @@ package main;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 import entities.Vector2D;
+import entities.creatures.Player;
 import graphics.Assets;
 import graphics.Camera;
 import input.KeyManager;
@@ -31,6 +34,8 @@ public class Window implements Runnable{
 	private KeyManager keyManager;
 	private Camera camera;
 	private Handler handler;
+	private Player player;
+	private JLabel gameOver;
 	
 	private long averageFPS = 0;
 	
@@ -76,7 +81,6 @@ public class Window implements Runnable{
 		keyManager.update();
 		if(State.currentState != null)
 			State.currentState.update();
-		
 	}
 	Color color = new Color(0, 0, 0, 125);
 	private void render(){
@@ -98,6 +102,13 @@ public class Window implements Runnable{
 		bs.show();
 		
 	}
+	
+	public void teste() {
+		if(player.gameOver()) {
+			System.out.print("teste");
+		}
+	}
+	
 	
 	@Override
 	public void run() {
@@ -128,10 +139,12 @@ public class Window implements Runnable{
 				ticks = 0;
 				timer = 0;
 			}
+			
 		}
 		stop();
 	}
-	
+
+
 	private synchronized void start(){
 		if(running)
 			return;
@@ -142,6 +155,7 @@ public class Window implements Runnable{
 		
 	}
 	private synchronized void stop(){
+		
 		if(!running)
 			return;
 		
@@ -160,5 +174,6 @@ public class Window implements Runnable{
 	
 	public static void main(String[] args) {
 		new Window().start();
+		
 	}
 }

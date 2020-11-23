@@ -26,10 +26,11 @@ public class GameState extends State{
 		world.update();
 		
 	}
-	
-	
+
+
 	@Override
 	public void render(Graphics g) {
 		world.render(g);
 	}	
+	
 }

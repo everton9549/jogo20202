@@ -15,6 +15,9 @@ import graphics.Assets;
 import graphics.Sound;
 import input.KeyManager;
 import input.MouseManager;
+import main.Window;
+import states.GameState;
+import states.State;
 import tiles.World;
 
 public class Player extends Creature{
@@ -50,6 +53,13 @@ public class Player extends Creature{
 	private Vector2D newPoint;
 	private double xMove, yMove;
 	private World world;
+	private Window window;
+	private int teste() {
+		return health;
+	}
+	
+	
+	
 	
 	
 	public Player(Vector2D position, double maxVelocity, World world) {
@@ -177,6 +187,15 @@ public class Player extends Creature{
 		
 	}
 	
+	public boolean gameOver() {
+		if(teste() <= 0) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
 	
 	@Override
 	public void render(Graphics g) {
@@ -193,6 +212,7 @@ public class Player extends Creature{
 		
 		g2d.drawImage(currentGun.getCurrentAnimation().getCurrentFrame(), at, null);
 		
+		
 		if(health > 300)
 			g2d.setColor(Color.GREEN);
 		else if(health > 200)
@@ -203,11 +223,13 @@ public class Player extends Creature{
 			g2d.setColor(Color.RED);
 		else if(health > 0)
 			g2d.setColor(Color.BLACK);
+		    
 		
 		g2d.fillRect(50, 25, health, 25);
 		
 	}
 	
+
 	public void hit(){
 		health -= 20;
 	}

@@ -45,6 +45,8 @@ public abstract class Entity {
 	public int getHeight() {
 		return height;
 	}
+
+
 	
 	
 }

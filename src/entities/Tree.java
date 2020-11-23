@@ -43,4 +43,6 @@ public class Tree extends Entity{
 	public double getRadius(){
 		return width/2;
 	}
+
+
 }
