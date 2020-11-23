@@ -71,7 +71,7 @@ public class World {
 			int x = (int)(Math.random()*1200); // use these to spawn zombies at random position
 			int y = (int)(Math.random()*1000);
 			zombiesAndBullets.add(new Zombie(new Vector2D(1000, 1000), 2, player));
-			zombiesAndBullets.add(new Zombie(new Vector2D(2000, 1000), 2, player));
+			//zombiesAndBullets.add(new Zombie(new Vector2D(2000, 1000), 2, player));
 			
 		}
 		
@@ -85,8 +85,9 @@ public class World {
 		particles = new ArrayList<Particle>();
 		obstacles = new ArrayList<Entity>();
 		bloodSplats = new ArrayList<Blood>();
-		player = new Player(new Vector2D(500, 500), 4, this);
+		player = new Player(new Vector2D(128, 640), 4, this);
 		timer.start();
+		
 		
 		// trees
 		
@@ -512,6 +513,7 @@ public class World {
 	}
 	
 	
+
 	public void update(){
 		player.update();
 		for(int i = 0; i < zombiesAndBullets.size(); i++)
